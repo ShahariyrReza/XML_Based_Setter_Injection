@@ -6,6 +6,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ImportResource;
 
 import com.example.model.coder;
+import com.example.model.computer;
 
 @SpringBootApplication
 @ImportResource ({"classpath:beanConfig.xml"})
@@ -15,6 +16,8 @@ public class DepInjectionApplication {
 	 	ApplicationContext context = SpringApplication.run(DepInjectionApplication.class, args);
 		
 		coder c1 = (coder) context.getBean("coder1");
+		System.out.println(c1.getName());
+		System.out.println(c1.getComputer().getBrand());
 	}
 
 }
