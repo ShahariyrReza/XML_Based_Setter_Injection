@@ -4,16 +4,15 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	
 	<bean id="coder1" class="com.example.model.coder" >
-	<property name="id" value="101"></property>
-	<property name="name" value="Shahariyr Reza"></property>
-	<property name="language" value="Java"></property>
-	<property name="computer" ref="computer1"></property>
+	<constructor-arg index="0" value="1001" ></constructor-arg>
+	<constructor-arg index="1" value="Shahariyr Reza" ></constructor-arg>
+	<constructor-arg index="2" value="Java" ></constructor-arg>
+	<constructor-arg index="3" ref="computer1" ></constructor-arg>
 	
 	</bean>
 	
 	<bean id="computer1" class="com.example.model.computer">
-	
-	<property name="brand" value="HP"></property>
+	<constructor-arg index="0" value="HP" ></constructor-arg>
 	
 	</bean>
 	

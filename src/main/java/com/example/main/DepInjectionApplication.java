@@ -18,6 +18,7 @@ public class DepInjectionApplication {
 		coder c1 = (coder) context.getBean("coder1");
 		System.out.println(c1.getName());
 		System.out.println(c1.getComputer().getBrand());
+		System.out.println(c1.getLanguage());
 	}
 
 }
